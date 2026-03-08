@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>捨てる前に、海外で売れ。｜古物×海外販売 クローズドライブ</title>
+  <style>
+    :root {
+      --green:  #1a5c3a;
+      --green2: #2d8653;
+      --coral:  #e8572a;
+      --coral2: #f07050;
+      --amber:  #b45309;
+      --bg:     #f8f9fb;
+      --bg2:    #ffffff;
+      --border: #e2e8f0;
+      --text:   #1a202c;
+      --text2:  #4a5568;
+      --text3:  #718096;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      background: linear-gradient(150deg, var(--green) 0%, var(--green2) 100%);
+      text-align: center;
+      padding: 80px 20px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      padding: 6px 20px;
+      border-radius: 20px;
+      margin-bottom: 32px;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 8vw, 72px);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      color: #ffffff;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 span {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border-radius: 4px;
+      padding: 0 8px;
+    }
+
+    .hero-sub {
+      font-size: clamp(15px, 2.5vw, 19px);
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 48px;
+      line-height: 1.9;
+    }
+
+    .hero-sub strong { color: #ffffff; font-weight: 700; }
+
+    .info-box {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 12px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 12px;
+      padding: 24px 40px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+    }
+
+    .info-item .icon { font-size: 18px; }
+
+    .info-item .label {
+      color: rgba(255,255,255,0.65);
+      font-weight: 600;
+      min-width: 80px;
+      font-size: 13px;
+    }
+
+    .info-item .value { color: #ffffff; font-weight: 700; }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--coral);
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 800;
+      padding: 18px 56px;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .cta-btn:hover {
+      background: var(--coral2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232,87,42,0.4);
+    }
+
+    .cta-note {
+      margin-top: 12px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ============ SECTIONS ============ */
+    section {
+      padding: 72px 20px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--coral);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: clamp(22px, 4.5vw, 36px);
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 28px;
+      color: var(--green);
+    }
+
+    h2 em {
+      font-style: normal;
+      color: var(--coral);
+    }
+
+    /* ============ STORY ============ */
+    .story-section { border-top: 1px solid var(--border); }
+
+    .story-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 32px;
+      font-size: 15px;
+      color: var(--text2);
+      line-height: 2.1;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+      margin-bottom: 32px;
+    }
+
+    .story-box p + p { margin-top: 16px; }
+
+    .story-box strong { color: var(--green); font-weight: 700; }
+
+    .story-box .highlight {
+      background: #fef3c7;
+      border-left: 3px solid var(--amber);
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      margin-top: 20px;
+      font-size: 15px;
+      color: #78350f;
+      line-height: 1.8;
+    }
+
+    /* ============ EMPATHY ============ */
+    .empathy-section { border-top: 1px solid var(--border); }
+
+    .checklist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text2);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .checklist li::before {
+      content: '□';
+      color: var(--green2);
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .empathy-closing {
+      font-size: 16px;
+      color: var(--text2);
+      border-left: 3px solid var(--coral);
+      padding-left: 20px;
+      line-height: 1.9;
+    }
+
+    .empathy-closing strong { color: var(--text); }
+
+    /* ============ SPEAKERS ============ */
+    .speakers-section {
+      border-top: 1px solid var(--border);
+      background: var(--bg2);
+      max-width: 100%;
+      padding: 72px 20px;
+    }
+
+    .speakers-section .section-label,
+    .speakers-section h2 {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .speakers-section h2 { display: block; }
+
+    .speaker-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .speaker-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .speaker-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+
+    .speaker-icon.green { background: #d1fae5; }
+    .speaker-icon.blue  { background: #dbeafe; }
+
+    .speaker-role {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--text3);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .speaker-name {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .speaker-desc {
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.8;
+    }
+
+    .speaker-tag {
+      display: inline-block;
+      background: #d1fae5;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+
+    .speaker-tag.blue {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    /* ============ CONTENT ============ */
+    .content-section { border-top: 1px solid var(--border); }
+
+    .content-intro {
+      font-size: 15px;
+      color: var(--text2);
+      margin-bottom: 40px;
+    }
+
+    .parts {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .part {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .part-header {
+      background: #ecfdf5;
+      border-bottom: 1px solid #a7f3d0;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .part-num {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--green2);
+      font-weight: 700;
+    }
+
+    .part-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--green);
+    }
+
+    .part-body {
+      padding: 20px 24px;
+      background: var(--bg2);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .part-item {
+      font-size: 14px;
+      color: var(--text2);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .part-item::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--coral);
+      font-size: 9px;
+      top: 6px;
+    }
+
+    /* ============ ITEMS ============ */
+    .items-section {
+      border-top: 1px solid var(--border);
+      background: var(--bg2);
+      max-width: 100%;
+      padding: 72px 20px;
+    }
+
+    .items-section .section-label,
+    .items-section h2 {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .items-section h2 { display: block; }
+
+    .items-intro {
+      font-size: 15px;
+      color: var(--text2);
+      margin-bottom: 32px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .item-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 720px;
+      margin: 0 auto 32px;
+    }
+
+    .item-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .item-emoji { font-size: 24px; flex-shrink: 0; }
+
+    .item-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .item-price {
+      font-size: 12px;
+      color: var(--coral);
+      font-weight: 700;
+    }
+
+    .item-note {
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #78350f;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ============ BENEFITS ============ */
+    .benefits-section { border-top: 1px solid var(--border); }
+
+    .benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .benefit {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 20px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .benefit-icon { font-size: 28px; flex-shrink: 0; }
+
+    .benefit-title {
+      font-size: 12px;
+      color: var(--coral);
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .benefit-desc {
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    /* ============ HOW TO ============ */
+    .howto-section { border-top: 1px solid var(--border); }
+
+    .steps { display: flex; flex-direction: column; gap: 0; }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+
+    .step:last-child { border-bottom: none; }
+
+    .step-num {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    /* ============ FAQ ============ */
+    .faq-section {
+      border-top: 1px solid var(--border);
+      background: var(--bg2);
+      max-width: 100%;
+      padding: 72px 20px;
+    }
+
+    .faq-section .section-label,
+    .faq-section h2 {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-section h2 { display: block; }
+
+    .faqs {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .faq { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+
+    .faq-q {
+      background: var(--bg);
+      padding: 18px 20px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--green);
+      display: flex;
+      gap: 12px;
+    }
+
+    .faq-q::before { content: 'Q'; color: var(--coral); font-weight: 900; flex-shrink: 0; }
+
+    .faq-a {
+      padding: 16px 20px;
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.8;
+      display: flex;
+      gap: 12px;
+      border-top: 1px solid var(--border);
+      background: var(--bg2);
+    }
+
+    .faq-a::before { content: 'A'; color: var(--green2); font-weight: 900; flex-shrink: 0; }
+
+    /* ============ FINAL CTA ============ */
+    .final-cta {
+      background: linear-gradient(150deg, var(--green) 0%, var(--green2) 100%);
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .final-cta-inner { max-width: 720px; margin: 0 auto; }
+
+    .final-message {
+      font-size: clamp(20px, 4vw, 30px);
+      font-weight: 900;
+      line-height: 1.6;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .final-sub {
+      font-size: 15px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.9;
+      margin-bottom: 48px;
+    }
+
+    .final-sub strong { color: #ffffff; }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      background: var(--green);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    @media (max-width: 480px) {
+      .info-box { padding: 20px 24px; }
+      .cta-btn { padding: 18px 36px; font-size: 16px; }
+      .item-grid { grid-template-columns: 1fr; }
+      .speaker-card { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-label">CLOSED LIVE 2026</div>
+    <h1>捨てる前に、<br><span>海外で売れ。</span></h1>
+    <p class="hero-sub">
+      古物のプロ × 海外販売のプロが初コラボ。<br>
+      <strong>「価値があるか分からないもの」の正体を、全部暴きます。</strong>
+    </p>
+
+    <div class="info-box">
+      <div class="info-item">
+        <span class="icon">📅</span>
+        <span class="label">日時</span>
+        <span class="value">2026年4月15日（水）20:00〜21:30</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">🔒</span>
+        <span class="label">形式</span>
+        <span class="value">録画なし・外部公開なし・完全クローズド</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">👥</span>
+        <span class="label">定員</span>
+        <span class="value">先着30名限定</span>
+      </div>
+      <div class="info-item">
+        <span class="icon">💰</span>
+        <span class="label">参加費</span>
+        <span class="value">無料</span>
+      </div>
+    </div>
+
+    <a href="#band" class="cta-btn">無料で参加する（BANDへ）</a>
+    <p class="cta-note">※ BANDアプリの事前インストールをお願いします</p>
+  </div>
+
+  <!-- STORY -->
+  <section class="story-section">
+    <p class="section-label">Story</p>
+    <h2>それ、本当に<em>ゴミ</em>ですか？</h2>
+
+    <div class="story-box">
+      <p>
+        実家の押し入れ、倉庫の奥、引き出しの中。<br>
+        「古くて使えない」「売れるわけがない」と思っているものが、<br>
+        <strong>海外では思いがけない価格で売れることがあります。</strong>
+      </p>
+      <p>
+        古物の片付けを専門にしている小林さんが現場で目の当たりにしてきたのは、<br>
+        「ゴミとして処分されていくはずだったものが、実は数万円の価値を持っていた」という現実。
+      </p>
+      <p>
+        そして海外販売のプロ・中村が知っているのは、<br>
+        日本では「古いだけ」のものが、欧州や英語圏のバイヤーには<br>
+        「希少で美しい日本のもの」として映るという事実。
+      </p>
+      <div class="highlight">
+        💡 このライブで伝えたいことはひとつ。<br>
+        <strong>「捨てる前に、一度確認してほしい。」</strong><br>
+        それだけで、あなたの手元の「不要品」が変わるかもしれません。
+      </div>
+    </div>
+  </section>
+
+  <!-- EMPATHY -->
+  <section class="empathy-section">
+    <p class="section-label">For You</p>
+    <h2>こんな方に<em>来てほしい</em></h2>
+
+    <ul class="checklist">
+      <li>実家の片付けや遺品整理で、古いものをどう処分すべか迷っている</li>
+      <li>断捨離したいけど、捨てるのはもったいない気がしている</li>
+      <li>古道具・骨董・昭和レトロなものが家に眠っている</li>
+      <li>フリマやメルカリで売ろうとしたが、値段が分からなかった</li>
+      <li>海外で売れると聞いたことはあるが、何をどうすればいいか分からない</li>
+      <li>片付け業者に依頼するとき、「価値あるもの」を見極めたい</li>
+    </ul>
+
+    <p class="empathy-closing">
+      専門知識は不要です。<br>
+      <strong>「捨てる前にこのライブを見た」、それだけで損をしなくなります。</strong>
+    </p>
+  </section>
+
+  <!-- SPEAKERS -->
+  <div class="speakers-section">
+    <p class="section-label">Speakers</p>
+    <h2>登壇者紹介</h2>
+
+    <div class="speaker-cards">
+      <div class="speaker-card">
+        <div class="speaker-icon green">🏺</div>
+        <div>
+          <p class="speaker-role">古物片付け専門家</p>
+          <p class="speaker-name">小林 【名前】</p>
+          <p class="speaker-desc">
+            古物商として長年にわたり片付け・遺品整理の現場に携わる。<br>
+            「処分されるはずだったもの」に価値を見出す目を持つ専門家。<br>
+            【実績・エピソード】
+          </p>
+          <span class="speaker-tag">古物商 × 片付けのプロ</span>
+        </div>
+      </div>
+
+      <div class="speaker-card">
+        <div class="speaker-icon blue">🌍</div>
+        <div>
+          <p class="speaker-role">eBay輸出専門家</p>
+          <p class="speaker-name">中村 【名前】</p>
+          <p class="speaker-desc">
+            eBayを中心に日本のものを海外へ販売する専門家。<br>
+            「英語が苦手でも海外に売れる」仕組みを構築してきた。<br>
+            【実績・エピソード】
+          </p>
+          <span class="speaker-tag blue">eBay輸出のプロ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <section class="content-section">
+    <p class="section-label">Contents</p>
+    <h2>当日、<em>話すこと。</em></h2>
+    <p class="content-intro">「古物のプロ」と「海外販売のプロ」が両方の視点で断言します。</p>
+
+    <div class="parts">
+      <div class="part">
+        <div class="part-header">
+          <span class="part-num">PART 01</span>
+          <span class="part-title">これは売れる？売れない？ライブ査定</span>
+        </div>
+        <div class="part-body">
+          <p class="part-item">小林さんが現場で見てきた「意外な高値品」を実例公開</p>
+          <p class="part-item">「古いだけ」と「希少品」の見分け方</p>
+          <p class="part-item">海外バイヤーが今、日本から探しているジャンル</p>
+        </div>
+      </div>
+
+      <div class="part">
+        <div class="part-header">
+          <span class="part-num">PART 02</span>
+          <span class="part-title">捨てる前にやるべき「5秒チェック」</span>
+        </div>
+        <div class="part-body">
+          <p class="part-item">専門家が教える、価値があるものの3つの共通点</p>
+          <p class="part-item">写真1枚で相場を調べる方法</p>
+          <p class="part-item">「これは無理」と思っても諦めなくていいジャンル</p>
+        </div>
+      </div>
+
+      <div class="part">
+        <div class="part-header">
+          <span class="part-num">PART 03</span>
+          <span class="part-title">売り方の選択肢、全部教えます</span>
+        </div>
+        <div class="part-body">
+          <p class="part-item">自分で売る vs 業者に買い取ってもらう、どちらが得か</p>
+          <p class="part-item">eBay・Catawiki、古物に向いているのはどちら</p>
+          <p class="part-item">手間をかけずに最大限の値段をつける方法</p>
+        </div>
+      </div>
+
+      <div class="part">
+        <div class="part-header">
+          <span class="part-num">PART 04</span>
+          <span class="part-title">Q&A（あなたの「これ売れますか？」に答えます）</span>
+        </div>
+        <div class="part-body">
+          <p class="part-item">チャットで商品の写真・説明を送ってください</p>
+          <p class="part-item">2人の専門家がリアルタイムで判定します</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ITEMS -->
+  <div class="items-section">
+    <p class="section-label">実例</p>
+    <h2>こんなものが<em>海外で売れています</em></h2>
+    <p class="items-intro">「まさかこれが？」と思うものほど、海外では価値があります。</p>
+
+    <div class="item-grid">
+      <div class="item-card">
+        <div class="item-emoji">🏺</div>
+        <div>
+          <div class="item-name">昭和の陶器・器</div>
+          <div class="item-price">数千〜数万円</div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="item-emoji">⏰</div>
+        <div>
+          <div class="item-name">古い掛け時計・置き時計</div>
+          <div class="item-price">1万〜10万円超</div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="item-emoji">🗡️</div>
+        <div>
+          <div class="item-name">刀装具・武具</div>
+          <div class="item-price">数万〜数十万円</div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="item-emoji">📷</div>
+        <div>
+          <div class="item-name">古いフィルムカメラ</div>
+          <div class="item-price">数千〜数万円</div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="item-emoji">🎎</div>
+        <div>
+          <div class="item-name">日本人形・こけし</div>
+          <div class="item-price">数千〜数万円</div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="item-emoji">📖</div>
+        <div>
+          <div class="item-name">古い漫画・絶版本</div>
+          <div class="item-price">数千〜数万円</div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="item-emoji">🍶</div>
+        <div>
+          <div class="item-name">古い漆器・酒器</div>
+          <div class="item-price">数千〜数万円</div>
+        </div>
+      </div>
+      <div class="item-card">
+        <div class="item-emoji">🧸</div>
+        <div>
+          <div class="item-name">昭和のおもちゃ・ブリキ</div>
+          <div class="item-price">数千〜数十万円</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item-note">
+      ⚠️ 上記はあくまで参考例です。状態・年代・種類によって大きく異なります。<br>
+      <strong>「売れるか分からない」ものこそ、このライブで確認してください。</strong>
+    </div>
+  </div>
+
+  <!-- BENEFITS -->
+  <section class="benefits-section">
+    <p class="section-label">Special Benefits</p>
+    <h2>参加者<em>限定プレゼント</em></h2>
+
+    <div class="benefits">
+      <div class="benefit">
+        <div class="benefit-icon">🎁</div>
+        <div>
+          <p class="benefit-title">特典①</p>
+          <p class="benefit-desc">「海外で売れる古物チェックリスト」PDF<br>カテゴリ別・相場目安つき保存版</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">📋</div>
+        <div>
+          <p class="benefit-title">特典②</p>
+          <p class="benefit-desc">「捨てる前の5秒チェックシート」PDF<br>片付けの現場で使える即戦力ツール</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon">🎤</div>
+        <div>
+          <p class="benefit-title">特典③ 先着5名限定</p>
+          <p class="benefit-desc">ライブ後の個別査定相談（30分・無料）<br>手持ちの商品を2人の専門家に直接見てもらえます</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO -->
+  <section class="howto-section" id="band">
+    <p class="section-label">How To Join</p>
+    <h2>参加方法は<em>3ステップ</em></h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <p class="step-title">下のボタンからBANDコミュニティに参加する</p>
+          <p class="step-desc">スマートフォンにBANDアプリをインストールして参加してください</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <p class="step-title">参加確認のメッセージが届く</p>
+          <p class="step-desc">通常24時間以内にBAND内でご連絡します</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <p class="step-title">当日、BAND内にZoomのURLが届く</p>
+          <p class="step-desc">顔出し不要・カメラOFFで参加できます<br>
+          ※ ライブ中にチャットで商品の写真を送ることができます</p>
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+    <div style="text-align:center;">
+      <a href="#" class="cta-btn">今すぐ参加する（残り30席）</a>
+      <p class="cta-note">※ 無料 ／ 録画なし ／ 4月15日（水）20:00〜</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <p class="section-label">FAQ</p>
+    <h2>よくある<em>質問</em></h2>
+
+    <div class="faqs">
+      <div class="faq">
+        <div class="faq-q">本当に無料ですか？</div>
+        <div class="faq-a">はい、完全無料です。ただし先着30名で締め切ります。</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q">古物商の資格がなくても参加できますか？</div>
+        <div class="faq-a">もちろんです。個人で断捨離・遺品整理をしている方や、家に古いものがあって気になっている方を歓迎します。</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q">eBayやCatawikiを知らなくても大丈夫ですか？</div>
+        <div class="faq-a">大丈夫です。「海外で売る」仕組みの基本から説明します。専門知識は不要です。</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q">Q&Aで自分の商品を査定してもらえますか？</div>
+        <div class="faq-a">はい。PART04のQ&Aタイムに、チャットで商品の写真や説明を送っていただければ、2人の専門家がその場で判定します。</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q">録画はありますか？</div>
+        <div class="faq-a">録画・アーカイブはありません。当日リアルタイムでのご参加をお願いします。</div>
+      </div>
+      <div class="faq">
+        <div class="faq-q">後で何か売り込まれますか？</div>
+        <div class="faq-a">ライブ内での販売は行いません。「知識のギブ」が目的です。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="final-cta">
+    <div class="final-cta-inner">
+      <p class="final-message">捨てる前に、<br>一度だけ確認してください。</p>
+      <p class="final-sub">
+        「どうせ大した価値はない」と思っているものが、<br>
+        <strong>海外の誰かにとっての宝物かもしれません。</strong><br>
+        このライブを見た後で捨てても、遅くはありません。
+      </p>
+      <a href="#band" class="cta-btn">無料で参加する（残り30席）</a>
+      <p class="cta-note">
+        📅 2026年4月15日（水）20:00〜21:30　／　🔒 録画なし　／　👥 先着30名限定
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 古物×海外販売クローズドライブ　小林 × 中村</p>
+  </footer>
+
+</body>
+</html>
